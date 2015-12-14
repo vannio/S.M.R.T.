@@ -14,7 +14,13 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Load grunt tasks automatically
-  require('load-grunt-tasks')(grunt);
+  // require('load-grunt-tasks')(grunt);
+
+  // Automatically load required grunt tasks
+  require('jit-grunt')(grunt, {
+    useminPrepare: 'grunt-usemin',
+    buildcontrol: 'grunt-build-control'
+  });
 
   grunt.loadNpmTasks('grunt-browserify');
 
@@ -382,6 +388,21 @@ module.exports = function (grunt) {
         },
         files:  {
           '.tmp/scripts/bundle.js': ['<%= config.app %>/scripts/main.js']
+        }
+      }
+    },
+
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      prod: {
+        options: {
+          remote: 'git@github.com:Vannio/mirror-mirror.git',
+          branch: 'prod'
         }
       }
     }
