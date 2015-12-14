@@ -1,0 +1,20 @@
+.tube-container {
+  // margin: 1em auto;
+}
+
+.tube-title {
+  margin-right: 1em;
+  flex: 1;
+}
+
+.tube-status {
+  text-align: right;
+
+  .dropdown {
+    margin: 1em;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.4em;
+    font-size: 0.8em;
+  }
+}

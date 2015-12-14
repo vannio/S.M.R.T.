@@ -1,0 +1,21 @@
+.time-container {
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.8em;
+  font-weight: normal;
+  padding-top: 0;
+
+  h1 {
+    font-weight: normal;
+    margin: 0 auto;
+  }
+}
+
+.time-minutes {
+  color: darken(#fff, 30%);
+}
+
+.time-seconds {
+  color: darken(#fff, 50%);
+}

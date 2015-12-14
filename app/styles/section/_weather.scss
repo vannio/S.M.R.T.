@@ -1,0 +1,25 @@
+.weather-container {
+  // h1, h2, h3, h4 {
+  //   display: inline-block;
+  // }
+
+  // .flex-container-inline {
+  //   margin: 1em;
+  // }
+}
+
+.weather-time {
+  display: block;
+  margin-right: 1em;
+}
+
+.weather-title {
+  display: inline-block;
+  margin-right: 0.5em;
+  flex: 1;
+}
+
+.weather-value {
+  display: inline-block;
+  // font-weight: bold;
+}

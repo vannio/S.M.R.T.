@@ -1,0 +1,16 @@
+.live-bus-container {
+  // margin: 1em auto;
+}
+
+.bus-number,
+.bus-destination {
+  margin-right: 1em;
+}
+
+.bus-number {
+  flex: 0.2;
+}
+
+.bus-destination {
+  flex: 1;
+}
