@@ -1,6 +1,6 @@
 # Mirror Mirror
 
-This is a web app for a smart mirror display, showing weather (Metoffice) and travel (TfL) updates.
+This is a Chrome web app for a smart mirror display, showing weather (Metoffice) and travel (TfL) updates.
 
 ## Dependencies
 
@@ -19,3 +19,7 @@ As long as you have the above dependencies installed correctly, all you need to 
 ## Deployment
 
 To build the project, run `grunt build`.
+
+## Notes
+
+Run the app in fullscreen mode.

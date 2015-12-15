@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -8,21 +10,20 @@
   user-select: none;
 }
 
+html,
 body {
+  -webkit-font-smoothing: antialiased;
   background: #000;
   font-family: 'Oxygen', serif;
   color: #fff;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
 }
 
-.container {
-  max-width: 400px;
-  margin: 0 auto;
-  @extend .flex-container;
-  flex-wrap: wrap;
-  font-size: 1.2em;
-  padding: 2em 0;
+header {
+  padding: 10px 0 100px;
+  width: 100%;
 }
 
 .flex-container {
@@ -33,27 +34,43 @@ body {
   display: inline-flex;
 }
 
+.container {
+  @extend .flex-container;
+  flex-wrap: wrap;
+  font-size: 0.8em;
+  padding: 10px 0;
+  margin-left: 20px;
+  max-width: 220px;
+  position: relative;
+  height: 100%;
+}
+
 .update-container {
   margin: 0 auto;
-  padding: 1em;
-  max-width: 400px;
+  padding: 10px 0;
   flex: 1 0 auto;
 
-  h1, h2, h3 {
-    margin-top: 0;
-    margin-bottom: 0.75em;
-    padding-bottom: 0.25em;
+  h1, 
+  h2, 
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
     text-transform: uppercase;
-  }
-
-  h1 {
-    // text-align: center;
   }
 
   h3 {
     letter-spacing: 3px;
     font-weight: bold;
   }
+}
+
+.left-sidebar {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 15px;
 }
 
 %unstyled-list {
@@ -69,4 +86,19 @@ body {
 
 .unstyled {
   @extend %unstyled-list;
+}
+
+.fullscreen-icon {
+  display: none;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../images/fullscreen.svg');
+  background-size: contain;
+  float: right;
+  margin-top: 1px;
+
+  body:fullscreen & {
+    display: none;
+  }
 }
