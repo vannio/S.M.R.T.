@@ -1,7 +1,7 @@
 .time-container {
   display: inline-block;
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 700;
   margin-right: 10px;
   padding: 0;
 
@@ -11,10 +11,12 @@
   }
 }
 
-.time-minutes {
-  color: darken(#fff, 30%);
-}
+// .time-minutes {
+  // font-weight: 300;
+  // color: darken(#fff, 30%);
+// }
 
 .time-seconds {
-  color: darken(#fff, 50%);
+  font-weight: 300;
+  // color: darken(#fff, 50%);
 }
