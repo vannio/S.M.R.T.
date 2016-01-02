@@ -7,7 +7,7 @@ module.exports = {
 		'use strict';
 
 	  $.ajax({
-	    url: api, 
+	    url: api,
 	    success: function(data) {
 	    	this.printStatus(data);
 	    },
@@ -22,14 +22,14 @@ module.exports = {
 	    	container.empty();
 
 				for (var i = 0; i < data.length; i++){
-					// Show no more than 7 entries
-					if (i < 5) {
+					// Show no more than 3 entries
+					if (i < 3) {
 						// Calculate how many minutes are left
 						var minsLeft = Math.floor(((new Date(data[i].expectedArrival) - new Date()) / 1000)/60);
-						var minsLeftText = (minsLeft <= 0) ? 'Due' : minsLeft + 'min';
+						var minsLeftText = minsLeft <= 0 ? '&nbsp;<strong>due</strong>' : minsLeft === 1 ? '&nbsp;in <strong>' + minsLeft + ' minute</strong>' : '&nbsp;in <strong>' + minsLeft + ' minutes</strong>';
 
 						// Print messages
-						container.append('<li class="flex-container"><span class="bus-number">' + data[i].lineName + '</span><span class="bus-destination">' + data[i].destinationName + '</span><span class="bus-time">' + minsLeftText + '</span></li>');
+						container.append('<li class="flex-container"><span>The&nbsp;</span><span class="bus-number">' + data[i].lineName + ' </span><span class="bus-destination">&nbsp;to ' + data[i].destinationName.split(',')[0] + ' is </span><span class="bus-time">' + minsLeftText + '</span></li>');
 					}
 				}
 	    }

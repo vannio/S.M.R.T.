@@ -16,7 +16,7 @@ module.exports = {
 		'use strict';
 
   	$.ajax({
-	    url: api, 
+	    url: api,
 	    success: function(data) {
 	    	this.printStatus(data);
 	    },
@@ -25,7 +25,7 @@ module.exports = {
 
 	    	// Clear the container for updates
 	    	container.empty();
-	    	
+
 	    	// Loop through set of data for each tube line..
 	    	for (var i = 0; i < data.length; i++){
 
@@ -33,17 +33,9 @@ module.exports = {
 	    		if (lines.indexOf(data[i].id) > -1){
 
 	    			// if so, print the line status:
-		    		container.append(
-		    			'<li class="flex-container"><span class="tube-title">' + data[i].name + '</span><span class="tube-status tube-status-' + data[i].id + '">' + data[i].lineStatuses[0].statusSeverityDescription + '</li>'
-		    		);
-
-		    		// If there isn't good service (urgh), print the reason why:
-		    		if (data[i].lineStatuses[0].reason !== undefined){
-		    			for(var j = 0; j < data[i].lineStatuses.length; j++){
-		    				$('.tube-status-' + data[i].id).append('<div class="dropdown dropdown-' + data[i].id + '">' + data[i].lineStatuses[j].reason + '</div>').css('cursor', 'pointer').css('font-weight','bold');
-		    				$('.dropdown-' + data[i].id).hide();
-		    			}
-		    		}
+						container.append(
+							'<li class="flex-container"><span class="tube-status">' + data[i].lineStatuses[0].statusSeverityDescription + ' on the </span><span class="tube-title tube-' + data[i].id + '">' + data[i].name + ' line</span></li>'
+						);
 		    	}
 	    	}
 	    }

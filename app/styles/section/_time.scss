@@ -6,7 +6,9 @@
   padding: 0;
 
   h1 {
+    font-size: 3em;
     font-weight: normal;
+    line-height: 1.4em;
     margin: 0 auto;
   }
 }
@@ -17,6 +19,7 @@
 // }
 
 .time-seconds {
+  display: none;
   font-weight: 300;
   // color: darken(#fff, 50%);
 }

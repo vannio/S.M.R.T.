@@ -43,7 +43,7 @@ module.exports = {
 		'use strict';
 
   	$.ajax({
-	    url: api, 
+	    url: api,
 	    success: function(data) {
 	    	this.printWeather(data.SiteRep);
 	    },
@@ -54,10 +54,7 @@ module.exports = {
 	      // Clear the container for updates
 	    	container.empty();
 
-	    	container.append('<li class="flex-container"><span class="weather-title">' + parameters[3].$ + '</span><span class="weather-value">' + values[parameters[3].name] + '&deg;C</span></li>');
-	    	container.append('<li class="flex-container"><span class="weather-title">Feels Like</span><span class="weather-value">' + values[parameters[0].name] + '&deg;C</span></li>');
-	    	container.append('<li class="flex-container"><span class="weather-title">' + parameters[8].$ + '</span><span class="weather-value">' + weatherType[values[parameters[8].name]] + '</span></li>');
-	    	container.append('<li class="flex-container"><span class="weather-title">Chance of Rain</span><span class="weather-value">' + values[parameters[9].name] + '%</span></li>');
+				container.append('<span class="weather-value">' + values[parameters[3].name] + '&deg;C ' + weatherType[values[parameters[8].name]] + '</span></li>');
 	    }
 	  });
 	},

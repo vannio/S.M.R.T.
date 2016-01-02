@@ -1,16 +1,22 @@
 .live-bus-container {
-  // margin: 1em auto;
-}
+  li {
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+  }
 
-.bus-number,
-.bus-destination {
-  margin-right: 1em;
+  span {
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+  }
 }
 
 .bus-number {
-  flex: 0.2;
-}
-
-.bus-destination {
-  flex: 1;
+  font-weight: bold;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  color: #000;
+  background-color: #fff;
+  border-radius: 2px;
+  padding-left: 0.15em;
+  padding-right: 0.15em;
 }

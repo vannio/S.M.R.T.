@@ -1,20 +1,40 @@
-.tube-container {
+// .tube-container {
   // margin: 1em auto;
-}
+// }
 
-.tube-title {
-  margin-right: 1em;
-  flex: 1;
+.tube {
+  &-title {
+    margin-left: 0.5em;
+    font-weight: bold;
+    padding: 0.15em;
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 2px;
+  }
+
+  &-circle {
+    background-color: #FFD300;
+    color: #000;
+  }
+
+  &-hammersmith-city {
+    background-color: #F3A9BB;
+    color: #000;
+  }
+
+  &-northern {
+    background-color: #000;
+  }
+
+  &-piccadilly {
+    background-color: #003688;
+  }
+
+  &-victoria {
+    background-color: #0098D4;
+  }
 }
 
 .tube-status {
-  text-align: right;
-
-  .dropdown {
-    margin: 1em;
-    font-weight: normal;
-    text-align: left;
-    line-height: 1.4em;
-    font-size: 0.8em;
-  }
+  padding: 0.15em;
 }
