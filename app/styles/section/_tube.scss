@@ -6,19 +6,19 @@
   &-title {
     margin-left: 0.5em;
     font-weight: bold;
-    padding: 0.15em;
+    padding: 0.15em 0.3em;
     white-space: nowrap;
     display: inline-block;
     border-radius: 2px;
   }
 
   &-circle {
-    background-color: #FFD300;
+    background-color: darken(#FFD300, 10%);
     color: #000;
   }
 
   &-hammersmith-city {
-    background-color: #F3A9BB;
+    background-color: darken(#F3A9BB, 10%);
     color: #000;
   }
 
@@ -27,11 +27,11 @@
   }
 
   &-piccadilly {
-    background-color: #003688;
+    background-color: darken(#003688, 10%);
   }
 
   &-victoria {
-    background-color: #0098D4;
+    background-color: darken(#0098D4, 10%);
   }
 }
 
