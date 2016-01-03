@@ -40,7 +40,7 @@ header {
   font-size: 0.8em;
   padding: 10px 0;
   margin-left: 100px;
-  max-width: 300px;
+  // max-width: 450px;
   position: relative;
   height: 100%;
 }
@@ -91,14 +91,15 @@ header {
 }
 
 .fullscreen-icon {
-  display: none;
   display: inline-block;
   width: 30px;
   height: 30px;
   background-image: url('../images/fullscreen.svg');
   background-size: contain;
-  float: right;
-  margin-top: 5px;
+  // margin-top: 0px;
+  position: absolute;
+  top: 1em;
+  right: 100px;
 
   body:fullscreen & {
     display: none;

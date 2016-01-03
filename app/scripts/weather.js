@@ -54,7 +54,7 @@ module.exports = {
 	      // Clear the container for updates
 	    	container.empty();
 
-				container.append('<span class="weather-value">' + values[parameters[3].name] + '&deg;C ' + weatherType[values[parameters[8].name]] + '</span></li>');
+				container.append('<span class="weather-value">' + values[parameters[3].name] + '&deg;<sup>c</sup> ' + weatherType[values[parameters[8].name]] + '</span></li>');
 	    }
 	  });
 	},

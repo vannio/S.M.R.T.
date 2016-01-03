@@ -29,14 +29,6 @@ var monthNames = [
 var dateContainer = $('#js-current-date');
 var timeContainer = $('#js-current-time');
 
-var date = new Date(),
-		year = date.getFullYear(),
-		month = date.getMonth(),
-		weekday = date.getDay(),
-		day = date.getDate(),
-		hour = ('0' + date.getHours()).slice(-2),
-		minutes = ('0' + date.getMinutes()).slice(-2);
-
 function nth(date) {
   if (date > 3 && date < 21) {
 		return 'th';
@@ -51,19 +43,35 @@ function nth(date) {
 }
 
 module.exports = {
-	printDate: function() {
-		dateContainer.append(weekdayNames[weekday] + ' ' + day + '<sup>' + nth(day) + '</sup> ' + monthNames[month]);
+	printDate: function(date) {
+    var year = date.getFullYear(),
+    		month = date.getMonth(),
+    		weekday = date.getDay(),
+    		day = date.getDate();
+
+    dateContainer.empty().append(weekdayNames[weekday] + ' ' + day + '<sup>' + nth(day) + '</sup> ' + monthNames[month]);
 	},
 
-	printTime: function() {
-		timeContainer.html('<h1>' + hour + ':<span class="time-minutes">' + minutes + '</span></h1>');
+	printTime: function(date) {
+    // var hour = ('0' + date.getHours()).slice(-2),
+    var hour = date.getHours() % 12 || 12,
+    		minutes = ('0' + date.getMinutes()).slice(-2),
+        seconds = ('0' + date.getSeconds()).slice(-2),
+        meridiem = date.getHours() >= 12 ? 'pm' : 'am';
+
+		timeContainer.empty().append('<h1>' + hour + ':<span class="time-minutes">' + minutes + '</span><span class="time-seconds">:' + seconds + '</span>' + meridiem + '</h1>');
 	},
 
   init: function() {
-		this.printDate();
-  	this.printTime();
+    var self = this;
+
+		self.printDate(new Date());
+  	self.printTime(new Date());
 
   	// Update time every 10seconds:
-  	setInterval(this.printTime, 10000);
+  	setInterval(function(){
+      self.printDate(new Date());
+      self.printTime(new Date());
+    }, 1000);
   }
 };
