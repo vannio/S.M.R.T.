@@ -1,6 +1,6 @@
 # S.M.R.T. (the smart mirror)
 
-This is a dashboard web app for a smart mirror display, showing the weather (Metoffice) and travel (TfL) updates. See my blog post about [S.M.R.T](http://vann.io/projects/2016/01/03/smrt.html).
+This is a dashboard web app for a smart mirror display, showing the weather (Metoffice) and travel (TfL) updates. See my [blog post](http://vann.io/projects/2016/01/03/smrt.html) about it.
 
 ### Dependencies
 
