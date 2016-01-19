@@ -1,25 +1,25 @@
-# Mirror Mirror
+# S.M.R.T. (the smart mirror)
 
-This is a Chrome web app for a smart mirror display, showing weather (Metoffice) and travel (TfL) updates.
+This is a dashboard web app for a smart mirror display, showing the weather (Metoffice) and travel (TfL) updates. See my blog post about [S.M.R.T](http://vann.io/projects/2016/01/03/smrt.html).
 
-## Dependencies
+### Dependencies
 
 - [Node.js](http://nodejs.org/)
 - [Grunt](http://gruntjs.com/)
 - [Bower](http://bower.io/)
 - [Sass (3.4+)](http://sass-lang.com/install)
 
-## Installation
+### Installation
 
-As long as you have the above dependencies installed correctly, all you need to do to get the project running locally is:
+1. Install dependencies listed above
+2. `npm install && bower install`
+3. `grunt serve`
 
-1. `npm install && bower install`
-2. `grunt serve`
-
-## Deployment
+### Deployment
 
 To build the project, run `grunt build`.
+Deploy to the `prod` branch with `grunt buildcontrol:prod`.
 
-## Notes
+#### Notes
 
-Run the app in fullscreen mode.
+Run the app in kiosk mode for full effect.
