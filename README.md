@@ -2,6 +2,8 @@
 
 This is a dashboard web app for a smart mirror display, showing the weather (Metoffice) and travel (TfL) updates. See my [blog post](http://vann.io/posts/projects/2016/01/03/smrt.html) about it.
 
+[![The Simpsons: Homer is  S-M-R-T](http://img.youtube.com/vi/tcGQpjCztgA/0.jpg)](https://www.youtube.com/watch?v=tcGQpjCztgA)
+
 ### Dependencies
 
 - [Node.js](http://nodejs.org/)
